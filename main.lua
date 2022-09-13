@@ -1,3 +1,5 @@
+
+
 function love.load()
 car = love.graphics.newImage("car.png")
 Street = love.graphics.newImage("Street.png")
@@ -23,12 +25,12 @@ end
 
 function love.update()
   frame = frame + 1
-  srool = srool + 3
-  srool2 = srool2 + 3
-  if srool > -60 then
+  srool = srool - 3
+  srool2 = srool2 - 3
+  if srool < -60 then
     srool = height
   end
-  if srool2 < height then
+  if srool2 > height then
     srool = -60
   end
 end
